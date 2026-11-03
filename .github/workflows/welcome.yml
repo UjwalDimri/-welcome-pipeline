@@ -1,0 +1,19 @@
+name: Welcome
+ 
+on:
+  push:
+    branches: [main]
+ 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+ 
+      - name: Execute Command
+        run: echo "Welcome to the DevOps Lab!"
+
+      - name: Display file content
+        run:  cat welcome.txt
